@@ -2,6 +2,8 @@ package com.ravaan.techky.spring.dto;
 
 import java.util.Date;
 
+import javax.validation.constraints.Size;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class User.
@@ -12,6 +14,7 @@ public class User {
 	private Integer userId;
 	
 	/** The first name. */
+	@Size(min = 2, message = "Minimum allowed size is 2 character")
 	private String firstName;
 
 	/** The last name. */
@@ -21,7 +24,9 @@ public class User {
 	private String address;
 
 	/** The enroll date. */
+	//@Past
 	private Date enrollDate;
+	
 		
 	/**
 	 * Instantiates a new user.
