@@ -52,6 +52,7 @@ public class User {
 ```
 
 - In above example, If requested User json does not pass validation then it throw HTTP 400 (Bad Request) code. To provide field level error message, we need to modify **handleMethodArgumentNotValid** method from ResponseEntityExceptionHandler class
+
 ```markdown
 @ControllerAdvice
 @RestController
@@ -73,6 +74,7 @@ public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptio
 ### HATEOAS (Hyperlink As The Engine Of Application State):
 - HATEOAS framework is available in Spring Boot startup kit.
 - With the help HATEOAS, we can able to send other request endpoints along with response which is useful from consumer prospective. Example, - If consumer requested user endpoints then in response along with user object it also bing some useful URI like - list-user, save-user, delete-user, etc.
+
  ```markdown
  	/**
 	 * Gets the all user.
@@ -114,8 +116,10 @@ public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptio
 		return resource;
 	}
  ```
+ 
 - **Please note**, above code is with reference to new HATEOAS update.
 - In Old HATEOAS framework, -
+
  ```markdown
  	/**
 	 * Find user.
