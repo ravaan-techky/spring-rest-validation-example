@@ -140,6 +140,16 @@ public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptio
 	}
  ```
 
+### Content Negotiation (Request & Response format setting):
+- We can able to change accepted format from request header field.
+- we have 2 format support with Jackson (Dependency - **jackson-dataformat-xml** and **jackson-dataformat-json** (by default included in spring framework)
+
+```markdown
+	<dependency>
+		<groupId>com.fasterxml.jackson.dataformat</groupId>
+		<artifactId>jackson-dataformat-xml</artifactId>
+	</dependency>
+```
 
 <br/><br/>
 [<i class="fa fa-arrow-left"></i> **Back**](/documentation/)
